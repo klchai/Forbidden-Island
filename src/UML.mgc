@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="Ile.Ile" x="44" y="97">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="Ile.vue.Vue" x="753" y="318">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="Ile.vue.VueCommandes"
+            endpointName="commandes" kind="Simple"/>
+        <Association destinationClassName="Ile.vue.VueGrille"
+            endpointName="grille" kind="Simple"/>
+    </Class>
+    <Class name="Ile.modele.State" x="273" y="559">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="Ile.joueur.Joueur.direction" x="115" y="358">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="Ile.modele.Modele" x="333" y="181">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="Ile.observer.Observable"/>
+        <Association destinationClassName="Ile.joueur.Joueur"
+            endpointName="j" kind="Simple"/>
+        <Communication destinationClassName="Ile.joueur.Joueur"/>
+        <Communication destinationClassName="Ile.observer.Observable"/>
+    </Class>
+    <Class name="Ile.modele.Cellule" x="349" y="446">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="Ile.modele.Event"
+            endpointName="eve" kind="Simple"/>
+        <Association destinationClassName="Ile.modele.Modele"
+            endpointName="modele" kind="Simple"/>
+        <Association destinationClassName="Ile.modele.State"
+            endpointName="etat" kind="Simple"/>
+    </Class>
+    <Class name="Ile.joueur.Joueur" x="70" y="216">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="Ile.joueur.Joueur.direction"
+            endpointName="d" kind="Simple"/>
+        <Association destinationClassName="Ile.modele.Modele"
+            endpointName="modele" kind="Simple"/>
+    </Class>
+    <Class name="Ile.vue.VueCommandes" x="607" y="245">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="Ile.modele.Modele"
+            endpointName="modele" kind="Simple"/>
+    </Class>
+    <Class name="Ile.observer.Observer" x="711" y="160">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="Ile.vue.VueGrille" x="877" y="472">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="Ile.observer.Observer"/>
+        <Association destinationClassName="Ile.modele.Cellule"
+            endpointName="joueur" kind="Simple"/>
+        <Association destinationClassName="Ile.modele.Modele"
+            endpointName="modele" kind="Simple"/>
+        <Communication destinationClassName="Ile.observer.Observable"/>
+    </Class>
+    <Class name="Ile.control.Controleur" x="293" y="59">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="Ile.modele.Modele"
+            endpointName="modele" kind="Simple"/>
+        <Communication destinationClassName="Ile.modele.Modele"/>
+    </Class>
+    <Class name="Ile.observer.Observable" x="677" y="32">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="Ile.observer.Observer"
+            endpointName="observers" kind="Simple"/>
+        <Communication destinationClassName="Ile.observer.Observer"/>
+    </Class>
+    <Class name="Ile.modele.Event" x="501" y="544">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+</ClassDiagram>
